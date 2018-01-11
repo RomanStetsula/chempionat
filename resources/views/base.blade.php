@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-  <meta name="Keywords" content="ФК, футбол, дрогобич, дрогобиччина, дрогобича, Футбол Дрогобиччини"> 
+  <meta name="Keywords" content="фк, футбол, дрогобич, дрогобиччина, дрогобича, футбол дрогобиччини">
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Футбол Дрогобиччини</title>
   <!-- Styles -->
-  <link href="/css/app.css" rel="stylesheet">
   <link href="/css/style.v1.2.css" rel="stylesheet">
   <link href="/css/bootstrap.css" rel="stylesheet">
   <link href="/css/font-awesome.min.css" rel="stylesheet">
   <link href="/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-datepicker.css" rel="stylesheet">
   @yield('admin-links')
   <!-- Scripts -->
   <script>
@@ -110,7 +110,7 @@
     </div>
     <div class="footer">
         <h5>Звязок з адміністрацією: тел. 380987331259, e-mail: stetsula89@i.ua, </h5>
-        <h5><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Футбол Дрогобиччини. Всі права захищені.<h5>
+        <h5><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Футбол Дрогобиччини. Всі права захищені.</h5>
     </div>
   </div>
 <!--GoogleAnalitics-->
@@ -121,14 +121,14 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-99625154-1', 'auto');
   ga('send', 'pageview');
-</script>
-     <!--Scripts--> 
+    </script>
+     <!--Scripts-->
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap-datepicker.min.js"></script>
   <script src="/js/bootstrap-datepicker.uk.min.js"></script>
-  <script src="/js/common.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/bootstrap-toggle.min.js"></script>
+  <script src="/js/common.js"></script>
   @yield('admin-scripts')
 </body>
 
