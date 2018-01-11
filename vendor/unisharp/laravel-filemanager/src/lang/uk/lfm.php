@@ -1,0 +1,65 @@
+<?php
+
+return [
+    'nav-back'          => 'Назад',
+    'nav-new'           => 'Нова папка',
+    'nav-upload'        => 'Загрузити',
+    'nav-thumbnails'    => 'Мініатюри',
+    'nav-list'          => 'Список',
+
+    'menu-rename'       => 'Переіменувати',
+    'menu-delete'       => 'Видалити',
+    'menu-view'         => 'Перегляд',
+    'menu-download'     => 'Загрузити',
+    'menu-resize'       => 'Змінити розмір',
+    'menu-crop'         => 'Обрізати',
+
+    'title-page'        => 'Менеджер файлів',
+    'title-panel'       => 'Laravel FileManager',
+    'title-upload'      => 'Загрузка файлу',
+    'title-view'        => 'Перегдяд файлу',
+    'title-root'        => 'Файли',
+    'title-shares'      => 'Загальні файлы',
+    'title-item'        => 'Номер',
+    'title-size'        => 'Розмір',
+    'title-type'        => 'Тип',
+    'title-modified'    => 'Змінений',
+    'title-action'      => 'Дія',
+
+    'type-folder'       => 'Папка',
+
+    'message-empty'     => 'Папка пуста.',
+    'message-choose'    => 'Виберіть файл',
+    'message-delete'    => 'Ви впевнені що хочете вибрати данний пункт?',
+    'message-name'      => 'Назва папки:',
+    'message-rename'    => 'Переіменувати на:',
+
+    'error-rename'      => 'Імя файлу уже використовується!',
+    'error-file-empty'  => 'Ви повинні выбрати файл!',
+    'error-file-exist'  => 'Файл с таким іменем вже існує!',
+    'error-file-size'   => 'File size exceeds server limit! (maximum size: :max)',
+    'error-delete-folder'=> 'Вы не можете удалить эту папку, потому что она не пустая!',
+    'error-folder-name' => 'Имя папки не может быть пустым!',
+    'error-folder-exist'=> 'Папка с таким названием уже существует!',
+    'error-folder-alnum'=> 'Only alphanumeric folder names are allowed!',
+    'error-mime'        => 'Неподдерживаемый MimeType: ',
+    'error-instance'    => 'Загруженный файл должен быть экземпляром UploadedFile',
+    'error-invalid'     => 'Неверный запрос загрузки',
+
+    'btn-upload'        => 'Загрузити файл',
+    'btn-uploading'     => 'Загрузка...',
+    'btn-close'         => 'Закрити',
+    'btn-crop'          => 'Обрізати',
+    'btn-cancel'        => 'Відміна',
+    'btn-resize'        => 'Змінити размір',
+
+    'resize-ratio'      => 'Масштаб:',
+    'resize-scaled'     => 'Зображення масштабоване:',
+    'resize-true'       => 'Так',
+    'resize-old-height' => 'Оригiнальн висота:',
+    'resize-old-width'  => 'Оригiнальна ширина:',
+    'resize-new-height' => 'Висота:',
+    'resize-new-width'  => 'Ширина:',
+
+    'locale-bootbox'    => 'uk',
+];

@@ -1,0 +1,163 @@
+/*--------------admin-menu--------------------------------*/
+.admin-menu{
+    background-color: #fff;
+    height: 50px;
+    background-color: #f3f3f3;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.admin-menu .fa-grav{
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 15px;
+    margin-left: -20px;
+    color: #396;
+}
+.admin-menu ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 50px;
+}
+.admin-menu ul li a{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 17px 20px;
+    color: #396;    
+}
+.admin-menu ul li a:hover{
+    color: #fff;
+    background-color: #396;
+    text-decoration: none;
+}
+/* -------------- admin all news page-------------------
+
+--------------------------------------------------------*/
+.admin-all-news-table a, input{
+    padding: 3px 5px;
+}
+.admin-all-news-table td:first-child{ 
+    width: 120px;
+}
+.admin-all-news-table td:last-child{ 
+    width: 100px;
+}
+.admin-all-news-table td button{
+    margin-bottom: 10px;
+}
+.admin-all-news-table img{
+    width: 100%;
+}
+
+.admin-all-news-table .btn{
+    width: 100%;
+}
+
+.bth:last-child{
+   margin-bottom: 0; 
+}
+.btn a {
+    color: #fff;
+    font-weight: bold;
+}
+.btn a:hover {
+    text-decoration: none;
+}
+input:hover {
+    color: #333;
+}
+/* -------------- admin create news page=-------------------
+
+--------------------------------------------------------*/
+.editnews-form .textarea, .edit-team .textarea{
+    width: 550px;
+}
+.cancel, .save{
+    margin-right: 20px;
+    float: left;    
+}
+.admin-showpost, .admin-showteam{
+    width: 550px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.after-news a:nth-child(1){
+    float: left;
+    margin-top: 10px;
+}
+.after-news a:nth-child(2){
+    float: right;
+    margin-top: 10px;
+}
+/* -------------- admin all teams page-------------------
+
+--------------------------------------------------------*/
+.all-teams table td:nth-child(2){
+    width: 80px;
+    text-align: center;
+}
+.all-teams table td:nth-child(2) img{
+    height: 40px;
+}
+.all-teams table td:last-child {
+   width: 200px;
+}
+.all-teams .table tr td, .admin-leagues .table  tbody tr td{
+    vertical-align: middle;
+}
+/* -------------- admin edit team page-------------------*/
+.added-logo, .added-foto{
+    text-align: center;
+}
+.added-logo img, .added-foto img{
+    max-height: 150px
+}
+#rank{
+    width: 210px;
+    height: 32px;
+    border-radius: 4px;
+    border-color: #c7c7c7;
+}
+.league-checkbox{
+    padding-top: 30px;
+    padding-left: 5px;
+}
+.admin-calendar .admin-calendar-table tbody tr td{
+    text-align: center;
+    padding: 1px;
+    vertical-align: middle;
+}
+.admin-calendar .admin-calendar-table tbody tr .home-team{
+    width: 20%;
+    text-align: right;
+    padding-right: 8px; 
+}
+.admin-calendar .admin-calendar-table tbody tr .away-team{
+    padding-left: 8px;
+    width: 20%;
+    text-align: left;
+}
+.admin-calendar-table tbody tr td .btn{
+    padding: 1px 5px;
+    margin-bottom: 0px;
+}
+.admin-calendar-table tbody tr .control{
+    width:360px;
+}
+.admin-calendar-table .delete-form{
+    display: inline;    
+}
+.admin-calendar-table tbody tr td .goals{
+    height: 20px;
+    width: 50px;
+}
+
+.teams-select{
+    width: 210px;
+    height: 32px;
+    border-radius: 4px;
+    border-color: #c7c7c7;
+}
+
+
+
+
