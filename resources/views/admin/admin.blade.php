@@ -1,7 +1,7 @@
 @extends('base')
 @section('admin-links')
-  <link href="/css/admin.css" rel="stylesheet">
-  <link href="/css/bootstrap-datepicker.css" rel="stylesheet">
+  <link href={{mix("/css/admin.css")}} rel="stylesheet">
+  {{--<link href="/css/bootstrap-datepicker.css" rel="stylesheet">--}}
 @endsection
     
 @section('content')

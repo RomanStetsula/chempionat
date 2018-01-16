@@ -19,7 +19,7 @@ class FacebookProvider extends AbstractProvider implements ProviderInterface
      *
      * @var string
      */
-    protected $version = 'v2.9';
+    protected $version = 'v2.8';
 
     /**
      * The user fields being requested.
@@ -62,7 +62,7 @@ class FacebookProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenUrl()
     {
-        return $this->graphUrl.'/'.$this->version.'/oauth/access_token';
+        return $this->graphUrl.'/oauth/access_token';
     }
 
     /**
@@ -78,7 +78,7 @@ class FacebookProvider extends AbstractProvider implements ProviderInterface
 
         $data = [];
 
-        $data = json_decode($response->getBody(), true);
+        parse_str($response->getBody(), $data);
 
         return Arr::add($data, 'expires_in', Arr::pull($data, 'expires'));
     }
