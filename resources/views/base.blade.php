@@ -7,6 +7,7 @@
   <meta name="Keywords" content="фк, футбол, дрогобич, дрогобиччина, дрогобича, футбол дрогобиччини">
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <title>Футбол Дрогобиччини</title>
   <!-- Styles -->
   <link href={{mix("/css/app.css")}} rel="stylesheet">
@@ -119,7 +120,7 @@
   ga('send', 'pageview');
     </script>
      <!--Scripts-->
-  <script src="/js/common.js"></script>
+  <script src={{mix("/js/common.js")}}></script>
   @yield('admin-scripts')
 </body>
 
