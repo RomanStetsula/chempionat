@@ -1,3 +1,13 @@
+//import jquery
+window.$ = window.jQuery = require('jquery');
+
+//import bootstrap
+require('bootstrap-sass');
+
+//bootstrap-toggle
+global.bootstrapToggle = require('bootstrap-toggle');
+
+
 $(document).ready(function() {
     $(".title:first").addClass('active');
     
