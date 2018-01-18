@@ -1,11 +1,14 @@
 //import jquery
-window.$ = window.jQuery = require('jquery');
+// window.$ = window.jQuery = require('jquery');
 
-//import bootstrap
-require('bootstrap-sass');
+// require ('popper');
+// import Popper from 'popper';
+// window.Popper = Popper;
+//import bootstrapnpm install popper
+require('./bootstrap');
 
 //bootstrap-toggle
-global.bootstrapToggle = require('bootstrap-toggle');
+// global.bootstrapToggle = require('bootstrap-toggle');
 
 
 $(document).ready(function() {
@@ -50,7 +53,7 @@ $(document).ready(function() {
     });
 //  -----END-------  bootstrap datapicker end --------
 //  
-//---------- Show team logo and team foto-----
+//----------Show team logo and team foto-----
     $('#logo').change(function () {
         
         var inputObj = $(this);

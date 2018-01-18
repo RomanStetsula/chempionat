@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.app')
 @section('admin-links')
   <link href={{mix("/css/admin.css")}} rel="stylesheet">
   {{--<link href="/css/bootstrap-datepicker.css" rel="stylesheet">--}}

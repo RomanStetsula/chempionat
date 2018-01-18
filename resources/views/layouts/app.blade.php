@@ -1,87 +1,124 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
+    @include('partials.head')
 </head>
+
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+    <div class="page">
+        <!-- Main Navbar-->
+        @include('partials.header')
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        {{--<!-- Section-->--}}
+        <div id="app">
+            {{--@yield('content')--}}
+        </div>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+        <!-- Page Footer-->
+        {{--@include('partials.footer')--}}
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        @yield('content')
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+        @include('partials.scripts')
 </body>
 </html>
+
+
+
+
+
+
+
+  {{--<div class="bg-img">--}}
+  {{--</div>--}}
+  {{--<div class="bg-overlay">--}}
+  {{--</div>--}}
+  {{--<div class="wrapper">  --}}
+    {{--<div class="header">--}}
+      {{--<div class="herb">--}}
+        {{--<img src="{{asset('images/index/drohobych_herb.png')}}" alt="">--}}
+      {{--</div>--}}
+      {{--<div class="logo">--}}
+        {{--<img src="{{asset('images/index/logo.png')}}" alt="">--}}
+        {{--<div class="main-massage">--}}
+          {{--<i>* Добавлена можливість додавати матчі у вкладці 'Календар' для користувачів</i>--}}
+        {{--</div> --}}
+      {{--</div>--}}
+      {{----}}
+    {{--</div>--}}
+    {{--<div class="menu-wrap">--}}
+        {{--<nav class="header-nav">--}}
+            {{--<ul class="left">--}}
+                {{--<li><a href="{{ URL::to('/') }}">Головна</a></li>--}}
+                {{--<li><a href="{{ URL::to('news') }}">Новини</a></li>--}}
+            {{--</ul>--}}
+            {{--<ul class="right">--}}
+                {{--@if (isset(Auth::user()->is_admin))--}}
+                    {{--@if (Auth::user()->is_admin)--}}
+                        {{--<li>--}}
+                            {{--<a class="admin" href="{{ url('admin-news') }}">Адмінка</a>--}}
+                        {{--</li>--}}
+                    {{--@endif--}}
+                {{--@endif--}}
+                {{--@if (Auth::guest())--}}
+                    {{--<li>--}}
+                        {{--Вхід через:--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ url('/auth/facebook') }}"><img src="{{asset('images/index/fb.png')}}" alt="auth-fb"--}}
+                                                                   {{--title="Увійти через facebook"></a>--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ url('/auth/vkontakte') }}"><img src="{{asset('images/index/vk.png')}}" alt="auth-vk"--}}
+                                                                    {{--title="Увійти через ВКонтакті"></a>--}}
+                    {{--</li>--}}
+                  {{--<!----}}
+                    {{--<li>--}}
+                        {{--<a href="{{ url('/login') }}">Ввійти</a>--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ url('/register') }}">Peєстрація</a>--}}
+                    {{--</li>--}}
+                  {{---->--}}
+                {{--@else--}}
+                    {{--<!----}}
+                        {{--@if (Auth::user()->avatar)--}}
+                        {{--<li>--}}
+                            {{--<img src="{{ Auth::user()->avatar }}" class='user' alt="Фото"/>--}}
+                        {{--</li>--}}
+                        {{--@endif--}}
+                    {{---->--}}
+                        {{--<li class="">--}}
+                            {{--@php--}}
+                                {{--$name = Auth::user()->name;--}}
+                                {{--$firstname = explode(' ', $name);--}}
+                            {{--@endphp--}}
+                            {{--{{$firstname[0]}}--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a title="Вийти" href="{{ url('/logout')}}"--}}
+                               {{--onclick="event.preventDefault();--}}
+                                {{--document.getElementById('logout-form').submit();">--}}
+                                {{--<span class="glyphicon glyphicon-log-out"></span>--}}
+                            {{--</a>--}}
+                            {{--<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">--}}
+                                {{--{{ csrf_field() }}--}}
+                            {{--</form>--}}
+                        {{--</li>--}}
+            {{--</ul>--}}
+            {{--</li>--}}
+            {{--@endif--}}
+            {{--</ul>--}}
+        {{--</nav>--}}
+    {{--</div>--}}
+      {{--<div class="container">--}}
+      {{--@yield('content')--}}
+    {{--</div>--}}
+    {{--<div class="footer">--}}
+        {{--<h5>Звязок з адміністрацією: тел. 380987331259, e-mail: stetsula89@i.ua, </h5>--}}
+        {{--<h5><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Футбол Дрогобиччини. Всі права захищені.</h5>--}}
+    {{--</div>--}}
+  {{--</div>--}}
+
+
+  {{--@yield('admin-scripts')--}}
+

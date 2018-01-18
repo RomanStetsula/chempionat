@@ -13,9 +13,13 @@ mix.setPublicPath('./public_html');
  |
  */
 
+
+
+
 mix.js('resources/assets/js/common.js', 'public_html/js')
    .sass('resources/assets/sass/app.scss', 'public_html/css')
 
     //for admin pages
-   .sass('resources/assets/sass/admin.scss', 'public_html/css')
+    // .js('resources/assets/js/admin.js', 'public_html/js')
+   // .sass('resources/assets/sass/admin.scss', 'public_html/css')
     .version();

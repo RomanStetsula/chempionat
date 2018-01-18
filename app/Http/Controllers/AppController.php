@@ -45,7 +45,7 @@ class AppController extends BaseController
 
         $league_table = $league?$this->getLeagueTable($league->id):null;
 
-        return view('main', compact('leagues_menu', 'posts', 'league', 'league_table'))
+        return view('layouts.app', compact('leagues_menu', 'posts', 'league', 'league_table'))
             ->with('leagues_menu', $this->leagues)
             ->with('sideMatches', $this->sideMatches);
     }
